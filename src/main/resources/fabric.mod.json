@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "elytramod",
+  "version": "${version}",
+  "name": "elytramod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/elytramod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.moclg.elytramace.client.ElytramaceDataGenerator"
+    ],
+    "client": [
+      "com.moclg.elytramace.client.ElytramaceClient"
+    ],
+    "main": [
+      "com.moclg.elytramace.Elytramace"
+    ]
+  },
+  "mixins": [
+    "elytramod.mixins.json",
+    {
+      "config": "elytramod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
